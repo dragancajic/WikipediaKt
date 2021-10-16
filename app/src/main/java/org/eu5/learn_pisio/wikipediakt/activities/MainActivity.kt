@@ -1,8 +1,10 @@
 package org.eu5.learn_pisio.wikipediakt.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import org.eu5.learn_pisio.wikipediakt.R
 
@@ -26,9 +28,21 @@ class MainActivity : AppCompatActivity() {
         false
     }
 
+    // like this, or ...
+    /*
+    private val mOnClickListener = View.OnClickListener { _ ->
+        startActivity(Intent(this, ArticleDetailActivity::class.java))
+    }*/
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //message.setOnClickListener(mOnClickListener)
+        // ... more concisely, like this:
+        message.setOnClickListener { _ ->
+            startActivity(Intent(this, ArticleDetailActivity::class.java))
+        }
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }

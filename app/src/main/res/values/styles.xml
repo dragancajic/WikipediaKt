@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Sub-theme/sub-style to our AppTheme here, because we're not going to be using
+		the Android Action Bar in our application.
+		We'll be using the new Toolbar View provided by the Android support libraries. -->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
 </resources>

@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         false
     }
 
-    // like this, or ...
+    // like this (in Kotlin), or ...
     /*
     private val mOnClickListener = View.OnClickListener { _ ->
         startActivity(Intent(this, ArticleDetailActivity::class.java))
